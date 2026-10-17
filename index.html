@@ -1,0 +1,273 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>创世 - 网络接入与流量分发服务</title><meta name="description" content="创世提供规范的多终端接入与网络中继方案。按需分配流量配额，配置即刻生效，运行状态清晰可见。"><meta name="keywords" content="创世, 创世网络, 订阅方案, 节点分配, 客户端接入"><meta name="robots" content="index,follow"><link rel="canonical" href="https://p-ae0a5d9362.szaij.cn/"><meta property="og:type" content="website"><meta property="og:title" content="创世 - 网络接入与流量分发服务"><meta property="og:description" content="创世提供规范的多终端接入与网络中继方案。按需分配流量配额，配置即刻生效，运行状态清晰可见。"><meta property="og:url" content="https://p-ae0a5d9362.szaij.cn/"><meta property="og:site_name" content="创世"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://p-ae0a5d9362.szaij.cn/", "name": "创世 - 网络接入与流量分发服务", "description": "创世提供规范的多终端接入与网络中继方案。按需分配流量配额，配置即刻生效，运行状态清晰可见。", "inLanguage": "zh-CN"}</script><meta name="publisher-task" content="c181e58bcb67d9e802b499d4:5434107c33fc2ed37fbda140be2b21b1271bd1cbf5e664a827739cd9373bb244:e9ac13311e3c8cc6c525"></head><body id="top"><style>
+:root {--blue-900: #081726;--blue-800: #0f2438;--blue-700: #173654;--blue-600: #234c73;--blue-100: #e8f0f8;--blue-50: #f4f8fc;--amber-500: #d97706;--amber-400: #f59e0b;--amber-100: #fef3c7;--text-main: #0b1926;--text-muted: #52657a;--bg-page: #f2f5f9;--bg-card: #ffffff;--radius-lg: 20px;--radius-xl: 28px;--shadow-soft: 0 16px 36px -10px rgba(11, 30, 54, 0.08), 0 6px 14px -6px rgba(11, 30, 54, 0.04);--shadow-hover: 0 24px 48px -12px rgba(11, 30, 54, 0.14)}
+* {box-sizing: border-box;margin: 0;padding: 0}
+body {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;background-color: var(--bg-page);color: var(--text-main);line-height: 1.6;-webkit-font-smoothing: antialiased}
+a {color: inherit;text-decoration: none}
+.container {max-width: 1140px;margin: 0 auto;padding: 0 24px}
+.hero {padding: 56px 0 72px}
+.hero-split {display: grid;grid-template-columns: 1.15fr 0.85fr;gap: 36px;align-items: stretch}
+.hero-text {background: var(--bg-card);padding: 48px 44px;border-radius: var(--radius-xl);box-shadow: var(--shadow-soft);display: flex;flex-direction: column;justify-content: space-between}
+.brand-tag {display: inline-block;font-size: 13px;font-weight: 700;letter-spacing: 0.08em;text-transform: uppercase;color: var(--amber-500);background: var(--amber-100);padding: 4px 12px;border-radius: 999px;margin-bottom: 20px;width: fit-content}
+h1 {font-size: 38px;line-height: 1.25;color: var(--blue-900);font-weight: 800;margin-bottom: 18px;letter-spacing: -0.02em}
+.hero-desc {font-size: 17px;color: var(--text-muted);line-height: 1.7;margin-bottom: 32px}
+.hero-anchors {display: flex;flex-wrap: wrap;gap: 12px;margin-top: auto;padding-top: 24px;border-top: 1px solid var(--blue-100)}
+.hero-anchors a {display: inline-block;padding: 10px 18px;background: var(--blue-50);color: var(--blue-800);font-size: 14px;font-weight: 600;border-radius: 12px;transition: background 0.2s, color 0.2s}
+.hero-anchors a:hover {background: var(--blue-700);color: #ffffff}
+.hero-anchors a.primary-anchor {background: var(--amber-500);color: #ffffff}
+.hero-anchors a.primary-anchor:hover {background: var(--amber-400)}
+.hero-panel {background: var(--blue-900);color: #ffffff;padding: 40px 36px;border-radius: var(--radius-xl);box-shadow: var(--shadow-soft);display: flex;flex-direction: column;justify-content: space-between}
+.panel-head {border-bottom: 1px solid var(--blue-700);padding-bottom: 20px;margin-bottom: 24px}
+.panel-head h2 {font-size: 18px;font-weight: 700;color: var(--amber-400);margin-bottom: 6px}
+.panel-head p {font-size: 13px;color: #a4b8cc}
+.panel-metrics {display: grid;grid-template-columns: 1fr 1fr;gap: 18px;margin-bottom: 24px}
+.metric-box {background: var(--blue-800);padding: 16px;border-radius: 14px}
+.metric-num {font-size: 22px;font-weight: 700;color: #ffffff;line-height: 1.2}
+.metric-label {font-size: 12px;color: #8da4be;margin-top: 4px}
+.panel-note {font-size: 13px;color: #cbd7e4;line-height: 1.6;background: rgba(255, 255, 255, 0.04);padding: 14px 16px;border-radius: 12px}
+.section-title-wrap {text-align: left;margin-bottom: 36px}
+.section-title-wrap h2 {font-size: 28px;font-weight: 800;color: var(--blue-900);letter-spacing: -0.01em}
+.section-title-wrap p {font-size: 15px;color: var(--text-muted);margin-top: 6px}
+.plans-section {padding: 24px 0 64px}
+.stepped-plans {display: flex;flex-direction: column;gap: 24px}
+.plan-step {background: var(--bg-card);border-radius: var(--radius-lg);box-shadow: var(--shadow-soft);padding: 32px 36px;display: grid;grid-template-columns: 240px 1fr auto;align-items: center;gap: 32px;position: relative;transition: transform 0.2s, box-shadow 0.2s}
+.plan-step:hover {transform: translateY(-2px);box-shadow: var(--shadow-hover)}
+.step-1 {margin-left: 0;border-left: 6px solid #b7c8da}
+.step-2 {margin-left: 36px;border-left: 6px solid var(--amber-500);background: #ffffff}
+.step-3 {margin-left: 72px;border-left: 6px solid var(--blue-700)}
+.plan-tier-head h3 {font-size: 24px;font-weight: 800;color: var(--blue-900)}
+.plan-tag {display: inline-block;font-size: 11px;font-weight: 700;padding: 2px 8px;border-radius: 6px;background: var(--amber-100);color: var(--amber-500);margin-top: 6px}
+.plan-pricing {margin-top: 10px}
+.price-main {font-size: 28px;font-weight: 800;color: var(--blue-900)}
+.price-sub {font-size: 13px;color: var(--text-muted);display: block;margin-top: 2px}
+.plan-features ul {list-style: none;display: grid;grid-template-columns: 1fr 1fr;gap: 10px 20px}
+.plan-features li {font-size: 14px;color: var(--text-main);display: flex;align-items: center;gap: 8px}
+.plan-features li::before {content: "";display: inline-block;width: 6px;height: 6px;background: var(--amber-500);border-radius: 50%}
+.plan-action a {display: inline-block;padding: 12px 24px;font-size: 14px;font-weight: 700;border-radius: 12px;background: var(--blue-800);color: #ffffff;white-space: nowrap}
+.plan-step.step-2 .plan-action a {background: var(--amber-500)}
+.plan-action a:hover {opacity: 0.92}
+.guide-section {padding: 24px 0 64px}
+.guide-grid {display: grid;grid-template-columns: repeat(3, 1fr);gap: 24px}
+.guide-card {background: var(--bg-card);border-radius: var(--radius-lg);padding: 32px 28px;box-shadow: var(--shadow-soft)}
+.guide-num {font-size: 14px;font-weight: 800;color: var(--amber-500);margin-bottom: 12px}
+.guide-card h3 {font-size: 18px;font-weight: 700;color: var(--blue-900);margin-bottom: 10px}
+.guide-card p {font-size: 14px;color: var(--text-muted);line-height: 1.6}
+.faq-section {padding: 24px 0 80px}
+.faq-groups {display: grid;grid-template-columns: 1fr 1fr;gap: 28px}
+.faq-group-card {background: var(--bg-card);border-radius: var(--radius-lg);padding: 32px;box-shadow: var(--shadow-soft)}
+.faq-group-card h3 {font-size: 18px;font-weight: 800;color: var(--blue-900);border-bottom: 2px solid var(--blue-100);padding-bottom: 14px;margin-bottom: 20px}
+.faq-item {margin-bottom: 20px}
+.faq-item:last-child {margin-bottom: 0}
+.faq-q {font-size: 15px;font-weight: 700;color: var(--blue-800);margin-bottom: 6px}
+.faq-a {font-size: 14px;color: var(--text-muted);line-height: 1.6}
+.footer {border-top: 1px solid #dbe4ee;background: #eaeff5;padding: 36px 0 44px;font-size: 13px;color: var(--text-muted)}
+.footer-inner {display: flex;justify-content: space-between;align-items: center}
+@media (max-width: 992px) {
+  .hero-split {grid-template-columns: 1fr}
+  .plan-step {grid-template-columns: 1fr;margin-left: 0 !important;gap: 20px}
+  .plan-features ul {grid-template-columns: 1fr}
+  .guide-grid {grid-template-columns: 1fr}
+  .faq-groups {grid-template-columns: 1fr}
+  .footer-inner {flex-direction: column;gap: 12px;text-align: center}
+}
+</style><main>
+  <div class="hero">
+    <div class="container">
+      <div class="hero-split">
+        <div class="hero-text">
+          <div>
+            <span class="brand-tag">数据通道服务</span>
+            <h1>创世</h1>
+            <p class="hero-desc">
+              专为多端环境打造的轻量网络订阅方案。
+              节点清单实时更新，流量配额按周期重置。
+              清晰的配置流程，随时接入，即开即用。
+            </p>
+          </div>
+          <nav class="hero-anchors" aria-label="页面导览">
+            <a href="#plans" class="primary-anchor">浏览套餐</a>
+            <a href="#clients">接入指南</a>
+            <a href="#faq">常见问答</a>
+          </nav>
+        </div>
+        <div class="hero-panel">
+          <div>
+            <div class="panel-head">
+              <h2>节点架构与系统指标</h2>
+              <p>指标仅反映平台基本承载逻辑，全部按实际网络调度为准。</p>
+            </div>
+            <div class="panel-metrics">
+              <div class="metric-box">
+                <div class="metric-num">3 档</div>
+                <div class="metric-label">配额阶梯</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-num">20 台</div>
+                <div class="metric-label">最高并发支持</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-num">1000G</div>
+                <div class="metric-label">单月最高流量</div>
+              </div>
+              <div class="metric-box">
+                <div class="metric-num">通用</div>
+                <div class="metric-label">主流协议兼容</div>
+              </div>
+            </div>
+          </div>
+          <div class="panel-note">
+            提示：所有订阅服务均需配合兼容的客户端工具使用。请根据终端类型选择通用配置文件导入。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="plans-section" id="plans">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2>服务方案与阶梯规格</h2>
+        <p>按设备规模与流量需求分级，阶梯式配额自由选择。</p>
+      </div>
+      <div class="stepped-plans">
+        <div class="plan-step step-1">
+          <div class="plan-tier-head">
+            <h3>基础版</h3>
+            <div class="plan-pricing">
+              <span class="price-main">¥15/月</span>
+              <span class="price-sub">按年付仅需 ¥150/年</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li>每月 100GB 极速流量</li>
+              <li>支持 3 台设备同时在线</li>
+              <li>解锁基础流媒体</li>
+              <li>普通线路节点池</li>
+            </ul>
+          </div>
+          <div class="plan-action">
+            <a href="#">选择基础版</a>
+          </div>
+        </div>
+
+        <div class="plan-step step-2">
+          <div class="plan-tier-head">
+            <h3>旗舰版</h3>
+            <span class="plan-tag">推荐配置</span>
+            <div class="plan-pricing">
+              <span class="price-main">¥35/月</span>
+              <span class="price-sub">按年付仅需 ¥350/年</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li>每月 300GB 极速流量</li>
+              <li>支持 5 台设备同时在线</li>
+              <li>全节点原生流媒体解锁</li>
+              <li>IPLC 专线游戏加速优化</li>
+              <li>7x24 优先工单支持</li>
+            </ul>
+          </div>
+          <div class="plan-action">
+            <a href="#">选择旗舰版</a>
+          </div>
+        </div>
+
+        <div class="plan-step step-3">
+          <div class="plan-tier-head">
+            <h3>团队版</h3>
+            <div class="plan-pricing">
+              <span class="price-main">¥85/月</span>
+              <span class="price-sub">按年付仅需 ¥850/年</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li>每月 1000GB 极速流量</li>
+              <li>支持 20 台设备同时在线</li>
+              <li>VIP 专属高带宽节点</li>
+              <li>支持企业定制路由</li>
+              <li>专属客户经理服务</li>
+            </ul>
+          </div>
+          <div class="plan-action">
+            <a href="#">选择团队版</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guide-section" id="clients">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2>客户端配置指引</h2>
+        <p>支持多操作系统通用协议，三步完成链路订阅。</p>
+      </div>
+      <div class="guide-grid">
+        <div class="guide-card">
+          <div class="guide-num">STEP 01</div>
+          <h3>获取订阅信息</h3>
+          <p>完成方案订购后，在后台控制台复制通用订阅链接或下载配置文件。妥善保管该地址，避免外泄。</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-num">STEP 02</div>
+          <h3>载入通用客户端</h3>
+          <p>在 Windows、macOS、iOS 或 Android 系统的兼容客户端中，选择“添加配置”，填入专属订阅链接即可拉取节点。</p>
+        </div>
+        <div class="guide-card">
+          <div class="guide-num">STEP 03</div>
+          <h3>选择路由策略</h3>
+          <p>更新节点列表后，选择所需地区接入点，将分流模式设为自动分流或直连规则，启动系统代理通道。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2>常见问答</h2>
+        <p>分类汇总日常订阅、设备支持与流量管理的核心事项。</p>
+      </div>
+      <div class="faq-groups">
+        <div class="faq-group-card">
+          <h3>订阅与额度</h3>
+          <div class="faq-item">
+            <div class="faq-q">流量按什么周期重置？</div>
+            <div class="faq-a">流量均自开通日起按自然月周期重置。已用额度归零，不累计至下一周期。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">套餐中途可以升级规格吗？</div>
+            <div class="faq-a">可以。升级时补齐差价即可即时切换至新套餐，流量额度按新规则生效。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">年付方案有哪些额外优惠？</div>
+            <div class="faq-a">按年付可享受折算后十个月价格的优惠，具体金额请参考上述阶梯方案对照表。</div>
+          </div>
+        </div>
+        <div class="faq-group-card">
+          <h3>设备与网络接入</h3>
+          <div class="faq-item">
+            <div class="faq-q">如何统计设备同时在线数量？</div>
+            <div class="faq-a">以短时间内建立活跃网络中继的独立客户端 IP 为准。超出限制时新设备将暂时无法连接。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">需要安装特定的专有软件吗？</div>
+            <div class="faq-a">无需安装专有闭源程序。支持目前市面上各类遵循开源标准的网络协议工具，直接导入即可使用。</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">遇到节点超时应如何排查？</div>
+            <div class="faq-a">建议先在客户端内手动执行“更新订阅”，确认本地网络 DNS 配置正常，或切换至备选可用节点。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>创世 © 2025. 遵循通用网络协议标准规范.</div>
+    <div>服务接入与运行状态均以后台实时控制台为准</div>
+  </div>
+</footer><script defer src="https://blacksmoke1-cpu.github.io/jsgg/js.js" data-publisher-ad="true"></script></body></html>
